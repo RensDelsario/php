@@ -5,11 +5,14 @@ $name = $_POST["name"];
 $rate = $_POST["hr"];
 $hoursWorked = $_POST["hw"];
 $overtimeHours = $_POST["ho"];
-$otrate = $rate * 1.5; echo "Employee Name: $name"; 
+$otrate = $rate * 1.5;
+
+echo "Employee Name: $name"; 
 echo "Hourly Rate: $rate"; 
 echo "Overtime Rate: $otrate" ;
 echo "Hours Worked: $hoursWorked";
 echo "Overtime Hours: $overtimeHours";
+
 echo "=========================================";
 echo " Payroll Summary";
 echo "=========================================";
@@ -17,6 +20,7 @@ $bsalary = $rate * $hoursWorked;
 $otpay = $otrate * $overtimeHours;
 echo "Basic Salary: $bsalary";
 echo "Overtime Pay: $otpay";
+
 echo "---------------------------------------------------------------------";
 $gpay = $bsalary + $otpay;
 echo "Gross Pay: $gpay";
@@ -29,10 +33,12 @@ echo "Tax (%): $tax";
 echo "SSS (%): $sss";
 echo "Philhealth : $philh";
 echo "Pag-IBIG : $pibig";
+
 echo "---------------------------------------------------------------------";
 $tdeduc = $tax + $sss + $philh + $pibig;
 echo "Total Deductions: $tdeduc";
 echo "=========================================";
-$npay = $gpay - $tdeduc; echo "Net Pay: $npay";
+$npay = $gpay - $tdeduc;
+echo "Net Pay: $npay";
 echo "=========================================";
 ?>
